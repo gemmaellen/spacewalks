@@ -3,9 +3,9 @@ import pandas as pd
 
 # Set filenames.
 # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r', encoding='ascii')
-output_file = open('./eva-data.csv', 'w', encoding='utf-8')
-graph_file = './cumulative_eva_graph.png'
+input_file = open('./data/eva-data.json', 'r', encoding='ascii')
+output_file = open('./data/eva-data.csv', 'w', encoding='utf-8')
+graph_file = './figures/cumulative_eva_graph.png'
 
 # Read in and parse the file of EVA activity. Format date and float columns. Drop records with missing data.
 eva_df = pd.read_json(input_file, convert_dates=['date'], encoding='ascii')
